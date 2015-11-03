@@ -1,0 +1,31 @@
+{
+  "name": "downsider/loggerhead",
+  "description": "A turtle based solution to all your logging needs",
+  "license": "MIT",
+  "homepage": "https://github.com/downsider/loggerhead",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "http://satis.silktide.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.0",
+    "downsider/puzzle-di": "^1.0",
+    "silktide/queueball": "^1.0",
+    "silktide/reposition-sql": "^1.0",
+    "silktide/reposition-clay": "^1.0",
+    "silktide/syringe": "^0",
+    "pimple/pimple": "^3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "4.*",
+    "mockery/mockery": "0.9.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Downsider\\Loggerhead\\": "src",
+      "Downsider\\Loggerhead\\Test\\": "test"
+    }
+  }
+}
