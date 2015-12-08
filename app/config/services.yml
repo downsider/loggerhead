@@ -1,0 +1,59 @@
+parameters:
+
+    silktide_queueball-zmq.queueId: "tcp://127.0.0.1:5555"
+
+    silktide_reposition-sql.dbName: "loggerhead"
+    silktide_reposition-sql.dbUsername: "loggerhead"
+    silktide_reposition-sql.dbPassword: "loggerhead"
+
+services:
+
+
+    processLog.command:
+        class: Downsider\LoggerheadApp\Command\ProcessLogMessage
+        arguments:
+            - @silktide_queueball.defaultQueue
+            - @messageProcessor
+            - @log.repository
+
+
+
+    messageProcessor:
+        class: Downsider\LoggerheadApp\Log\MessageProcessor
+        arguments:
+            - @format.repository
+            - @logFactory
+
+    logFactory:
+        class: Downsider\LoggerheadApp\Log\LogFactory
+
+
+    log.repository:
+        class: Downsider\LoggerheadApp\Log\LogRepository
+        arguments:
+            - @silktide_reposition.defaultMetadataFactory
+            - @silktide_reposition.queryBuilder
+            - @silktide_reposition.defaultStorage
+
+    abstract.repository:
+        abstract: true
+        factoryService: @silktide_reposition.repositoryManager
+        factoryMethod: "getRepositoryFor"
+
+    format.repository:
+        class: Downsider\LoggerheadApp\Format\FormatRepository
+        extends: @abstract.repository
+        arguments:
+            - Downsider\LoggerheadApp\Format\Format
+
+    field.repository:
+        class: Downsider\LoggerheadApp\Format\FieldRepository
+        extends: @abstract.repository
+        arguments:
+            - Downsider\LoggerheadApp\Format\Field
+
+    template.repository:
+        class: Downsider\LoggerheadApp\Format\TemplateRepository
+        extends: @abstract.repository
+        arguments:
+            - Downsider\LoggerheadApp\Format\Template
