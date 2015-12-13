@@ -1,18 +1,18 @@
 <?php
 /**
- * @package loggerhead-app
+ * @package loggerhead
  * @copyright Copyright © 2015 Danny Smart
  */
 
-namespace Downsider\LoggerheadApp\Command;
+namespace Downsider\Loggerhead\Command;
 
-use Downsider\LoggerheadApp\Exception\LogProcessingException;
+use Downsider\Loggerhead\Exception\LogProcessingException;
 use Silktide\QueueBall\Queue\AbstractQueue;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Downsider\LoggerheadApp\Log\MessageProcessor;
-use Downsider\LoggerheadApp\Log\LogRepository;
+use Downsider\Loggerhead\Log\MessageProcessor;
+use Downsider\Loggerhead\Log\LogRepository;
 
 class ProcessLogMessage extends Command
 {

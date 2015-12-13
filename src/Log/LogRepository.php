@@ -1,15 +1,15 @@
 <?php
 /**
- * @package loggerhead-app
+ * @package loggerhead
  * @copyright Copyright © 2015 Danny Smart
  */
 
-namespace Downsider\LoggerheadApp\Log;
+namespace Downsider\Loggerhead\Log;
 
-use Downsider\LoggerheadApp\Exception\LogException;
-use Downsider\LoggerheadApp\Format\Field;
-use Downsider\LoggerheadApp\Format\Format;
-use Downsider\LoggerheadApp\Format\Template;
+use Downsider\Loggerhead\Exception\LogException;
+use Downsider\Loggerhead\Format\Field;
+use Downsider\Loggerhead\Format\Format;
+use Downsider\Loggerhead\Format\Template;
 use Silktide\Reposition\Collection\Collection;
 use Silktide\Reposition\Metadata\EntityMetadata;
 use Silktide\Reposition\Metadata\EntityMetadataFactoryInterface;

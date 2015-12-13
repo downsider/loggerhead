@@ -1,8 +1,8 @@
 {
-  "name": "downsider/loggerhead-app",
-  "description": "A turtle based solution to all your logging needs. The Loggerhead app receives and processes log messages",
+  "name": "downsider/loggerhead",
+  "description": "A turtle based solution to all your logging needs. Loggerhead receives and processes log messages from a queue",
   "license": "MIT",
-  "homepage": "https://github.com/downsider/loggerhead-app",
+  "homepage": "https://github.com/downsider/loggerhead",
   "require": {
     "php": ">=5.5.0",
     "downsider/puzzle-di": "^1.0",
@@ -19,8 +19,8 @@
   },
   "autoload": {
     "psr-4": {
-      "Downsider\\LoggerheadApp\\": "src",
-      "Downsider\\LoggerheadApp\\Test\\": "test"
+      "Downsider\\Loggerhead\\": "src",
+      "Downsider\\Loggerhead\\Test\\": "test"
     }
   }
 }

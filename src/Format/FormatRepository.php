@@ -1,10 +1,10 @@
 <?php
 /**
- * @package loggerhead-app
+ * @package loggerhead
  * @copyright Copyright © 2015 Danny Smart
  */
 
-namespace Downsider\LoggerheadApp\Format;
+namespace Downsider\Loggerhead\Format;
 
 use Silktide\Reposition\Metadata\EntityMetadata;
 use Silktide\Reposition\Repository\AbstractRepository;
@@ -22,7 +22,7 @@ class FormatRepository extends AbstractRepository
     protected function configureMetadata()
     {
         $this->entityMetadata->addRelationshipMetadata(
-            "Downsider\\LoggerheadApp\\Format\\Template",
+            "Downsider\\Loggerhead\\Format\\Template",
             [
                 EntityMetadata::METADATA_RELATIONSHIP_TYPE => EntityMetadata::RELATIONSHIP_TYPE_MANY_TO_ONE,
                 EntityMetadata::METADATA_RELATIONSHIP_PROPERTY => "template",
@@ -32,7 +32,7 @@ class FormatRepository extends AbstractRepository
         );
 
         $this->entityMetadata->addRelationshipMetadata(
-            "Downsider\\LoggerheadApp\\Format\\Field",
+            "Downsider\\Loggerhead\\Format\\Field",
             [
                 EntityMetadata::METADATA_RELATIONSHIP_TYPE => EntityMetadata::RELATIONSHIP_TYPE_ONE_TO_MANY,
                 EntityMetadata::METADATA_RELATIONSHIP_PROPERTY => "fields",

@@ -1,10 +1,10 @@
 <?php
 /**
- * @package loggerhead-app
+ * @package loggerhead
  * @copyright Copyright © 2015 Danny Smart
  */
 
-namespace Downsider\LoggerheadApp\Exception;
+namespace Downsider\Loggerhead\Exception;
 
 class LogProcessingException extends \Exception
 {

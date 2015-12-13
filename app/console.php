@@ -8,7 +8,7 @@ use Silktide\Syringe\ReferenceResolver;
 use Silktide\Syringe\ContainerBuilder;
 use Silktide\Syringe\Loader\JsonLoader;
 use Silktide\Syringe\Loader\YamlLoader;
-use Downsider\LoggerheadApp\PuzzleConfig;
+use Downsider\Loggerhead\PuzzleConfig;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Command\Command;
 

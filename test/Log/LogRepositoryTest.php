@@ -1,12 +1,12 @@
 <?php
 /**
- * @package loggerhead-app
+ * @package loggerhead
  * @copyright Copyright © 2015 Danny Smart
  */
 
-namespace Downsider\LoggerheadApp\Test\Log;
+namespace Downsider\Loggerhead\Test\Log;
 
-use Downsider\LoggerheadApp\Log\LogRepository;
+use Downsider\Loggerhead\Log\LogRepository;
 use Silktide\Reposition\Metadata\EntityMetadata;
 
 class LogRepositoryTest extends \PHPUnit_Framework_TestCase {
@@ -22,12 +22,12 @@ class LogRepositoryTest extends \PHPUnit_Framework_TestCase {
             "value" => "float"
         ];
 
-        $field = \Mockery::mock("Downsider\\LoggerheadApp\\Format\\Field");
+        $field = \Mockery::mock("Downsider\\Loggerhead\\Format\\Field");
         $field->shouldReceive("getFieldName")->andReturnValues(array_keys($fields));
         $field->shouldReceive("getType")->andReturnValues($fields);
 
-        /** @var \Mockery\Mock|\Downsider\LoggerheadApp\Format\Format $format */
-        $format = \Mockery::mock("Downsider\\LoggerheadApp\\Format\\Format");
+        /** @var \Mockery\Mock|\Downsider\Loggerhead\Format\Format $format */
+        $format = \Mockery::mock("Downsider\\Loggerhead\\Format\\Format");
         $format->shouldReceive("getName")->andReturn("format");
         $format->shouldReceive("getCollection")->andReturn($table);
         $format->shouldReceive("getTemplate")->once()->andReturn(null);

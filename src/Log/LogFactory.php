@@ -1,10 +1,10 @@
 <?php
 /**
- * @package loggerhead-app
+ * @package loggerhead
  * @copyright Copyright © 2015 Danny Smart
  */
 
-namespace Downsider\LoggerheadApp\Log;
+namespace Downsider\Loggerhead\Log;
 
 class LogFactory implements LogFactoryInterface
 {

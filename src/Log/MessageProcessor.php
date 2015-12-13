@@ -1,14 +1,14 @@
 <?php
 /**
- * @package loggerhead-app
+ * @package loggerhead
  * @copyright Copyright © 2015 Danny Smart
  */
 
-namespace Downsider\LoggerheadApp\Log;
+namespace Downsider\Loggerhead\Log;
 
-use Downsider\LoggerheadApp\Exception\LogProcessingException;
-use Downsider\LoggerheadApp\Format\FormatRepository;
-use Downsider\LoggerheadApp\Format\Format;
+use Downsider\Loggerhead\Exception\LogProcessingException;
+use Downsider\Loggerhead\Format\FormatRepository;
+use Downsider\Loggerhead\Format\Format;
 
 class MessageProcessor 
 {
