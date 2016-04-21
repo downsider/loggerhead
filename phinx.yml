@@ -17,7 +17,7 @@ environments:
         adapter: mysql
         host: localhost
         name: loggerhead
-        user: root
+        user: phinx
         pass: 
         port: 3306
                     
