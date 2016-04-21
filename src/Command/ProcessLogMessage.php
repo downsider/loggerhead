@@ -60,8 +60,7 @@ class ProcessLogMessage extends Command
         $queueMessage = $this->queue->receiveMessage();
 
         try {
-            $message = $queueMessage->getMessage();
-            $this->processor->process($message);
+            $this->processor->process($queueMessage->getMessage());
             $this->queue->completeMessage($queueMessage);
         } catch (LogProcessingException $e) {
             $this->displayError($e);
