@@ -30,7 +30,7 @@ class ProcessLogMessage extends Command
     /**
      * @var MessageProcessor
      */
-    protected $procesor;
+    protected $processor;
 
     /**
      * @var LogRepository
@@ -40,7 +40,7 @@ class ProcessLogMessage extends Command
     public function __construct(AbstractQueue $queue, MessageProcessor $processor, LogRepository $logRepo)
     {
         $this->queue = $queue;
-        $this->procesor = $processor;
+        $this->processor = $processor;
         $this->logRepo = $logRepo;
 
         parent::__construct();
@@ -56,24 +56,24 @@ class ProcessLogMessage extends Command
     public function execute(InputInterface $input, OutputInterface $output)
     {
         $this->output = $output;
-        $this->output->writeln("receiving log message");
-        //$queueMessage = $this->queue->receiveMessage();
+        $this->output->writeln("Receiving log message");
+        $queueMessage = $this->queue->receiveMessage();
 
         try {
-            //$this->procesor->process($queueMessage->getMessage());
-            $this->procesor->process(json_encode(["format" => "test", "entry" => ["timestamp" => 15263547]]));
+            $message = $queueMessage->getMessage();
+            $this->processor->process($message);
+            $this->queue->completeMessage($queueMessage);
         } catch (LogProcessingException $e) {
             $this->displayError($e);
+            $this->queue->returnMessage($queueMessage);
             return;
         }
 
-        $format = $this->procesor->getFormat();
+        $format = $this->processor->getFormat();
         $this->output->writeln("<comment>Using the '{$format->getName()}' format</comment>");
 
-        die("\nformat: " . print_r($format, true));
-
         $this->logRepo->setFormat($format);
-        $this->logRepo->save($this->procesor->getLog());
+        $this->logRepo->save($this->processor->getLog());
         $this->output->writeln("<info>Log record saved</info>");
     }
 

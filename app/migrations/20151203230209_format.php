@@ -31,6 +31,7 @@ class Format extends AbstractMigration
             ->addColumn("name", "string", ["limit" => 100])
             ->addColumn("collection", "string", ["limit" => 255])
             ->addColumn("template_id", "integer")
+            ->addColumn("log_max_age", "integer")
             ->create();
 
         $this->table("template")

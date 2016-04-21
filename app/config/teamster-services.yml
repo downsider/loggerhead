@@ -1,0 +1,9 @@
+parameters:
+    silktide_teamster.consolePath: "%app.dir%/app/console.php"
+    silktide_teamster.pool.pidFile: "pool.pid"
+
+    silktide_teamster.pool.serviceConfig:
+        loggerheadProcess:
+            command: "downsider:loggerhead:process"
+            type: "console"
+            instances: 4

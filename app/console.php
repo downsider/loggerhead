@@ -32,6 +32,8 @@ foreach ($loaders as $loader) {
     $builder->addLoader($loader);
 }
 
+$builder->setApplicationRootDirectory($appDir);
+
 $puzzleConfigs = PuzzleConfig::getConfigPaths("silktide/syringe");
 $builder->addConfigFiles($puzzleConfigs);
 $builder->addConfigFile("services.yml");

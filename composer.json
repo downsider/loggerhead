@@ -6,12 +6,13 @@
   "require": {
     "php": ">=5.5.0",
     "downsider/puzzle-di": "^1.0",
-    "silktide/queueball-zmq": "^1.0",
     "silktide/reposition-sql": "^1.0",
     "silktide/reposition-clay": "^2.0",
     "silktide/syringe": "^1.0",
     "symfony/console": "~2.7.0",
-    "robmorgan/phinx": "0.5.*"
+    "robmorgan/phinx": "0.5.*",
+    "silktide/queueball-redis": "^1.0",
+    "silktide/teamster": "^1.0"
   },
   "require-dev": {
     "phpunit/phpunit": "4.*",

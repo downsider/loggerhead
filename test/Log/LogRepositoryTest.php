@@ -64,7 +64,7 @@ class LogRepositoryTest extends \PHPUnit_Framework_TestCase {
 
         $repo = new LogRepository($metadataFactory, $builder, $storage);
         $repo->setFormat($format);
-
+        
         $repo->find(1);
         // repeat to check if we use the cache
         $repo->find(1);

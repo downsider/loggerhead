@@ -93,10 +93,10 @@ class LogRepository implements RepositoryInterface
         $metadata->setCollection($this->getCollectionName());
         $metadata->setPrimaryKey("id");
 
-        echo "\nformat: " . print_r($this->format, true);
+        // echo "\nformat: " . print_r($this->format, true);
 
         // get fields, from both the format and the template
-        $fields = $this->format->getFields()->toArray();
+        $fields = $this->format->getFields()->toArray(false);
         $template = $this->format->getTemplate();
         if ($template instanceof Template) {
             $templateFields = $template->getFields();
@@ -134,6 +134,7 @@ class LogRepository implements RepositoryInterface
     public function find($id, $includeRelationships = null)
     {
         $this->checkFormat();
+
         $metadata = $this->getMetadata();
         $query = $this->queryBuilder->find($metadata)
             ->where()
@@ -272,6 +273,11 @@ class LogRepository implements RepositoryInterface
     protected function addComparisonToQuery(TokenSequencerInterface $query, $field, $value)
     {
         $query->ref($field)->op("=")->val($value);
+    }
+
+    public function createEntity()
+    {
+        throw new \Exception("CreateEntity is not supported in this context");
     }
 
 } 

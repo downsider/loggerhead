@@ -4,28 +4,29 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b8c78a3d22861a1cbc848eabefad4923",
-    "content-hash": "e05aa787e7c3411e5eb7fed0795bb264",
+    "hash": "259a80ec531e0a427eca4a3321501847",
+    "content-hash": "96592607e622e9855c2bc83747683095",
     "packages": [
         {
             "name": "downsider/clay",
-            "version": "1.2.3",
+            "version": "1.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/downsider/clay.git",
-                "reference": "921ea9488a5e444075f2ef5ac706cc1af979b41e"
+                "reference": "f258a4935f415389613b89c5c185e4e6b6a1ae00"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/downsider/clay/zipball/921ea9488a5e444075f2ef5ac706cc1af979b41e",
-                "reference": "921ea9488a5e444075f2ef5ac706cc1af979b41e",
+                "url": "https://api.github.com/repos/downsider/clay/zipball/f258a4935f415389613b89c5c185e4e6b6a1ae00",
+                "reference": "f258a4935f415389613b89c5c185e4e6b6a1ae00",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "4.*"
+                "phpunit/phpunit": "4.*",
+                "symfony/yaml": "^2.8"
             },
             "type": "library",
             "autoload": {
@@ -45,20 +46,20 @@
                 "model",
                 "models"
             ],
-            "time": "2015-12-08 10:58:40"
+            "time": "2016-04-17 23:28:01"
         },
         {
             "name": "downsider/puzzle-di",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/downsider/puzzle-di.git",
-                "reference": "8f86b1188eac41c31d9e596d053b703a6f663286"
+                "reference": "8e9aac5615dcac7781972049a8475df70e6236ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/downsider/puzzle-di/zipball/8f86b1188eac41c31d9e596d053b703a6f663286",
-                "reference": "8f86b1188eac41c31d9e596d053b703a6f663286",
+                "url": "https://api.github.com/repos/downsider/puzzle-di/zipball/8e9aac5615dcac7781972049a8475df70e6236ad",
+                "reference": "8e9aac5615dcac7781972049a8475df70e6236ad",
                 "shasum": ""
             },
             "require": {
@@ -85,7 +86,7 @@
             ],
             "description": "Puzzle DI, auto configuration for dependency injection in modules",
             "homepage": "https://github.com/downsider/puzzle-di",
-            "time": "2015-11-04 13:53:25"
+            "time": "2016-03-17 13:37:29"
         },
         {
             "name": "pimple/pimple",
@@ -132,6 +133,94 @@
                 "dependency injection"
             ],
             "time": "2015-09-11 15:10:35"
+        },
+        {
+            "name": "predis/predis",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nrk/predis.git",
+                "reference": "84060b9034d756b4d79641667d7f9efe1aeb8e04"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nrk/predis/zipball/84060b9034d756b4d79641667d7f9efe1aeb8e04",
+                "reference": "84060b9034d756b4d79641667d7f9efe1aeb8e04",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "suggest": {
+                "ext-curl": "Allows access to Webdis when paired with phpiredis",
+                "ext-phpiredis": "Allows faster serialization and deserialization of the Redis protocol"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Predis\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniele Alessandri",
+                    "email": "suppakilla@gmail.com",
+                    "homepage": "http://clorophilla.net"
+                }
+            ],
+            "description": "Flexible and feature-complete PHP client library for Redis",
+            "homepage": "http://github.com/nrk/predis",
+            "keywords": [
+                "nosql",
+                "predis",
+                "redis"
+            ],
+            "time": "2015-07-30 18:34:15"
+        },
+        {
+            "name": "psr/log",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/fe0936ee26643249e916849d48e3a51d5f5e278b",
+                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Psr\\Log\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "time": "2012-12-21 11:40:51"
         },
         {
             "name": "robmorgan/phinx",
@@ -197,16 +286,16 @@
         },
         {
             "name": "silktide/queueball",
-            "version": "2.0.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silktide/queueball.git",
-                "reference": "1c65d96c0725a07c29c5af22d6fa361780ceb70b"
+                "reference": "d9793a25013f394fd994c119577fcf15b892d737"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silktide/queueball/zipball/1c65d96c0725a07c29c5af22d6fa361780ceb70b",
-                "reference": "1c65d96c0725a07c29c5af22d6fa361780ceb70b",
+                "url": "https://api.github.com/repos/silktide/queueball/zipball/d9793a25013f394fd994c119577fcf15b892d737",
+                "reference": "d9793a25013f394fd994c119577fcf15b892d737",
                 "shasum": ""
             },
             "require": {
@@ -235,26 +324,26 @@
             ],
             "description": "Silktide QueueBall, a message queue abstraction module",
             "homepage": "https://github.com/silktide/queueball",
-            "time": "2015-11-27 22:22:53"
+            "time": "2016-01-26 18:23:15"
         },
         {
-            "name": "silktide/queueball-zmq",
-            "version": "1.0.0",
+            "name": "silktide/queueball-redis",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/silktide/queueball-zmq.git",
-                "reference": "1b77c437477830e69b7b645d8182b260a8881e9e"
+                "url": "https://github.com/silktide/queueball-redis.git",
+                "reference": "39b7168ed56449bdcfd1d534944b63a237f49194"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silktide/queueball-zmq/zipball/1b77c437477830e69b7b645d8182b260a8881e9e",
-                "reference": "1b77c437477830e69b7b645d8182b260a8881e9e",
+                "url": "https://api.github.com/repos/silktide/queueball-redis/zipball/39b7168ed56449bdcfd1d534944b63a237f49194",
+                "reference": "39b7168ed56449bdcfd1d534944b63a237f49194",
                 "shasum": ""
             },
             "require": {
-                "ext-zmq": "*",
                 "php": ">=5.4.0",
-                "silktide/queueball": "^2.0"
+                "predis/predis": "^1.0",
+                "silktide/queueball": "^2.1"
             },
             "require-dev": {
                 "mockery/mockery": "0.9.*",
@@ -270,30 +359,30 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Silktide\\QueueBall\\ZeroMq\\": "src",
-                    "Silktide\\QueueBall\\ZeroMq\\Test\\": "test"
+                    "Silktide\\QueueBall\\Redis\\": "src",
+                    "Silktide\\QueueBall\\Redis\\Test\\": "test"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
-            "description": "A ZeroMQ implementation for Silktide QueueBall, the message queue abstraction system",
-            "homepage": "https://github.com/silktide/queueball-zmq",
-            "time": "2015-11-27 22:44:46"
+            "description": "A module for Silktide QueueBall, the message queue abstraction system, using Redis lists as queues",
+            "homepage": "https://github.com/silktide/queueball-redis",
+            "time": "2016-04-04 11:51:16"
         },
         {
             "name": "silktide/reposition",
-            "version": "1.4.6",
+            "version": "1.5.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silktide/reposition.git",
-                "reference": "8e18ac41bd1ceff00251a74210463096153527b9"
+                "reference": "fdd1c22dc5d13d761e9f6c5edf0dc7bd47b4eb5a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silktide/reposition/zipball/8e18ac41bd1ceff00251a74210463096153527b9",
-                "reference": "8e18ac41bd1ceff00251a74210463096153527b9",
+                "url": "https://api.github.com/repos/silktide/reposition/zipball/fdd1c22dc5d13d761e9f6c5edf0dc7bd47b4eb5a",
+                "reference": "fdd1c22dc5d13d761e9f6c5edf0dc7bd47b4eb5a",
                 "shasum": ""
             },
             "require": {
@@ -310,7 +399,7 @@
             "extra": {
                 "downsider-puzzle-di": {
                     "silktide/syringe": {
-                        "path": "config/syringe.json"
+                        "path": "config/syringe.yml"
                     }
                 }
             },
@@ -326,20 +415,20 @@
             ],
             "description": "A modular database abstraction system",
             "homepage": "https://github.com/silktide/reposition",
-            "time": "2015-12-08 00:48:57"
+            "time": "2016-04-17 23:26:34"
         },
         {
             "name": "silktide/reposition-clay",
-            "version": "2.0.3",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silktide/reposition-clay.git",
-                "reference": "ce3afc24dfb6530ed8d4e497895da52407169b6b"
+                "reference": "fe317f192c527a9695b03cb51e938eb1f0229be4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silktide/reposition-clay/zipball/ce3afc24dfb6530ed8d4e497895da52407169b6b",
-                "reference": "ce3afc24dfb6530ed8d4e497895da52407169b6b",
+                "url": "https://api.github.com/repos/silktide/reposition-clay/zipball/fe317f192c527a9695b03cb51e938eb1f0229be4",
+                "reference": "fe317f192c527a9695b03cb51e938eb1f0229be4",
                 "shasum": ""
             },
             "require": {
@@ -358,7 +447,7 @@
             "extra": {
                 "downsider-puzzle-di": {
                     "silktide/syringe": {
-                        "path": "config/syringe.json"
+                        "path": "config/syringe.yml"
                     }
                 }
             },
@@ -374,26 +463,27 @@
             ],
             "description": "module for integrating downsider/clay with silktide/reposition",
             "homepage": "https://github.com/silktide/reposition-clay",
-            "time": "2015-12-07 11:49:05"
+            "time": "2016-03-16 11:05:22"
         },
         {
             "name": "silktide/reposition-sql",
-            "version": "1.7.3",
+            "version": "1.9.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silktide/reposition-sql.git",
-                "reference": "695f9657bfd077c1d46c72d534b3e3fb17e1e767"
+                "reference": "1946e69ecfc4b14a176f66e79afbbeeb0eff9a2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silktide/reposition-sql/zipball/695f9657bfd077c1d46c72d534b3e3fb17e1e767",
-                "reference": "695f9657bfd077c1d46c72d534b3e3fb17e1e767",
+                "url": "https://api.github.com/repos/silktide/reposition-sql/zipball/1946e69ecfc4b14a176f66e79afbbeeb0eff9a2d",
+                "reference": "1946e69ecfc4b14a176f66e79afbbeeb0eff9a2d",
                 "shasum": ""
             },
             "require": {
-                "downsider/clay": "^1.0",
+                "downsider/clay": "^1.1",
                 "php": ">=5.5.0",
-                "silktide/reposition": "^1.0"
+                "psr/log": "^1.0",
+                "silktide/reposition": "^1.5.13"
             },
             "require-dev": {
                 "mockery/mockery": "0.9.*",
@@ -422,20 +512,20 @@
             ],
             "description": "SQL module for silktide/reposition",
             "homepage": "https://github.com/silktide/reposition-sql",
-            "time": "2015-12-08 00:52:56"
+            "time": "2016-04-11 00:47:23"
         },
         {
             "name": "silktide/syringe",
-            "version": "1.1.2",
+            "version": "1.1.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silktide/syringe.git",
-                "reference": "6247aa2e26e254f73ec7f601cc6378b5a1cd2ae2"
+                "reference": "b1ffd8b504809a674d4acc0dc324c2560625fb91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silktide/syringe/zipball/6247aa2e26e254f73ec7f601cc6378b5a1cd2ae2",
-                "reference": "6247aa2e26e254f73ec7f601cc6378b5a1cd2ae2",
+                "url": "https://api.github.com/repos/silktide/syringe/zipball/b1ffd8b504809a674d4acc0dc324c2560625fb91",
+                "reference": "b1ffd8b504809a674d4acc0dc324c2560625fb91",
                 "shasum": ""
             },
             "require": {
@@ -464,25 +554,74 @@
             ],
             "description": "Silktide Syringe, configuration utility for Pimple",
             "homepage": "https://github.com/silktide/syringe",
-            "time": "2015-11-24 12:41:23"
+            "time": "2016-04-18 10:09:27"
         },
         {
-            "name": "symfony/config",
-            "version": "v2.8.0",
+            "name": "silktide/teamster",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/config.git",
-                "reference": "f21c97aec1b5302d2dc0d17047ea8f4e4ff93aae"
+                "url": "https://github.com/silktide/teamster.git",
+                "reference": "43b26be2829b9b72378a3b988c57a51437369828"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/f21c97aec1b5302d2dc0d17047ea8f4e4ff93aae",
-                "reference": "f21c97aec1b5302d2dc0d17047ea8f4e4ff93aae",
+                "url": "https://api.github.com/repos/silktide/teamster/zipball/43b26be2829b9b72378a3b988c57a51437369828",
+                "reference": "43b26be2829b9b72378a3b988c57a51437369828",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pcntl": "*",
+                "php": ">=5.3.0",
+                "symfony/console": "~2"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "1.4.*",
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "extra": {
+                "downsider-puzzle-di": {
+                    "silktide/syringe": {
+                        "path": "config/syringe.json"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Silktide\\Teamster\\": "src",
+                    "Silktide\\Teamster\\Test\\": "test"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "An implementation of the Thread Pool pattern, for running a suite of console commands continuously",
+            "homepage": "https://github.com/silktide/teamster",
+            "time": "2016-02-22 16:33:13"
+        },
+        {
+            "name": "symfony/config",
+            "version": "v2.8.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/config.git",
+                "reference": "5273f4724dc5288fe7a33cb08077ab9852621f2c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/config/zipball/5273f4724dc5288fe7a33cb08077ab9852621f2c",
+                "reference": "5273f4724dc5288fe7a33cb08077ab9852621f2c",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.9",
                 "symfony/filesystem": "~2.3|~3.0.0"
+            },
+            "suggest": {
+                "symfony/yaml": "To use the yaml reference dumper"
             },
             "type": "library",
             "extra": {
@@ -514,20 +653,20 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2015-11-23 20:38:01"
+            "time": "2016-03-04 07:54:35"
         },
         {
             "name": "symfony/console",
-            "version": "v2.7.7",
+            "version": "v2.7.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "16bb1cb86df43c90931df65f529e7ebd79636750"
+                "reference": "6100a40569b2be1b6aba1cc6a92fe6cb71024fc8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/16bb1cb86df43c90931df65f529e7ebd79636750",
-                "reference": "16bb1cb86df43c90931df65f529e7ebd79636750",
+                "url": "https://api.github.com/repos/symfony/console/zipball/6100a40569b2be1b6aba1cc6a92fe6cb71024fc8",
+                "reference": "6100a40569b2be1b6aba1cc6a92fe6cb71024fc8",
                 "shasum": ""
             },
             "require": {
@@ -573,20 +712,20 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2015-11-18 09:54:26"
+            "time": "2016-03-09 16:30:49"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v3.0.0",
+            "version": "v3.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "692d98d813e4ef314b9c22775c86ddbeb0f44884"
+                "reference": "f82499a459dcade2ea56df94cc58b19c8bde3d20"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/692d98d813e4ef314b9c22775c86ddbeb0f44884",
-                "reference": "692d98d813e4ef314b9c22775c86ddbeb0f44884",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/f82499a459dcade2ea56df94cc58b19c8bde3d20",
+                "reference": "f82499a459dcade2ea56df94cc58b19c8bde3d20",
                 "shasum": ""
             },
             "require": {
@@ -622,20 +761,20 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2015-11-23 10:41:47"
+            "time": "2016-03-27 10:24:39"
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.8.0",
+            "version": "v2.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "f79824187de95064a2f5038904c4d7f0227fedb5"
+                "reference": "584e52cb8f788a887553ba82db6caacb1d6260bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/f79824187de95064a2f5038904c4d7f0227fedb5",
-                "reference": "f79824187de95064a2f5038904c4d7f0227fedb5",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/584e52cb8f788a887553ba82db6caacb1d6260bb",
+                "reference": "584e52cb8f788a887553ba82db6caacb1d6260bb",
                 "shasum": ""
             },
             "require": {
@@ -671,7 +810,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2015-11-30 12:35:10"
+            "time": "2016-03-04 07:54:35"
         }
     ],
     "packages-dev": [
@@ -890,22 +1029,24 @@
         },
         {
             "name": "phpspec/prophecy",
-            "version": "v1.5.0",
+            "version": "v1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "4745ded9307786b730d7a60df5cb5a6c43cf95f7"
+                "reference": "3c91bdf81797d725b14cb62906f9a4ce44235972"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/4745ded9307786b730d7a60df5cb5a6c43cf95f7",
-                "reference": "4745ded9307786b730d7a60df5cb5a6c43cf95f7",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/3c91bdf81797d725b14cb62906f9a4ce44235972",
+                "reference": "3c91bdf81797d725b14cb62906f9a4ce44235972",
                 "shasum": ""
             },
             "require": {
                 "doctrine/instantiator": "^1.0.2",
+                "php": "^5.3|^7.0",
                 "phpdocumentor/reflection-docblock": "~2.0",
-                "sebastian/comparator": "~1.1"
+                "sebastian/comparator": "~1.1",
+                "sebastian/recursion-context": "~1.0"
             },
             "require-dev": {
                 "phpspec/phpspec": "~2.0"
@@ -913,7 +1054,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.4.x-dev"
+                    "dev-master": "1.5.x-dev"
                 }
             },
             "autoload": {
@@ -946,7 +1087,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2015-08-13 10:07:40"
+            "time": "2016-02-15 07:46:21"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -1190,16 +1331,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.8.19",
+            "version": "4.8.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "b2caaf8947aba5e002d42126723e9d69795f32b4"
+                "reference": "a1066c562c52900a142a0e2bbf0582994671385e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/b2caaf8947aba5e002d42126723e9d69795f32b4",
-                "reference": "b2caaf8947aba5e002d42126723e9d69795f32b4",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/a1066c562c52900a142a0e2bbf0582994671385e",
+                "reference": "a1066c562c52900a142a0e2bbf0582994671385e",
                 "shasum": ""
             },
             "require": {
@@ -1258,7 +1399,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-11-30 08:18:59"
+            "time": "2016-03-14 06:16:08"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -1434,16 +1575,16 @@
         },
         {
             "name": "sebastian/environment",
-            "version": "1.3.3",
+            "version": "1.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/environment.git",
-                "reference": "6e7133793a8e5a5714a551a8324337374be209df"
+                "reference": "dc7a29032cf72b54f36dac15a1ca5b3a1b6029bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/6e7133793a8e5a5714a551a8324337374be209df",
-                "reference": "6e7133793a8e5a5714a551a8324337374be209df",
+                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/dc7a29032cf72b54f36dac15a1ca5b3a1b6029bf",
+                "reference": "dc7a29032cf72b54f36dac15a1ca5b3a1b6029bf",
                 "shasum": ""
             },
             "require": {
@@ -1480,7 +1621,7 @@
                 "environment",
                 "hhvm"
             ],
-            "time": "2015-12-02 08:37:27"
+            "time": "2016-02-26 18:40:46"
         },
         {
             "name": "sebastian/exporter",
