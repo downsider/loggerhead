@@ -1,28 +1,28 @@
+imports:
+  - teamster-services.yml
+
 parameters:
+    silktide_queueball-redis.redis.host: "localhost"
+    silktide_queueball-redis.defaultQueue: "loggerhead"
 
-    silktide_queueball-zmq.queueId: "tcp://127.0.0.1:5555"
-
+    silktide_reposition-sql.dbHost: "localhost"
     silktide_reposition-sql.dbName: "loggerhead"
     silktide_reposition-sql.dbUsername: "loggerhead"
     silktide_reposition-sql.dbPassword: "loggerhead"
 
 services:
-
-
     processLog.command:
         class: Downsider\Loggerhead\Command\ProcessLogMessage
         arguments:
-            - @silktide_queueball.defaultQueue
-            - @messageProcessor
-            - @log.repository
-
-
+            - "@silktide_queueball.defaultQueue"
+            - "@messageProcessor"
+            - "@log.repository"
 
     messageProcessor:
         class: Downsider\Loggerhead\Log\MessageProcessor
         arguments:
-            - @format.repository
-            - @logFactory
+            - "@format.repository"
+            - "@logFactory"
 
     logFactory:
         class: Downsider\Loggerhead\Log\LogFactory
@@ -31,29 +31,29 @@ services:
     log.repository:
         class: Downsider\Loggerhead\Log\LogRepository
         arguments:
-            - @silktide_reposition.defaultMetadataFactory
-            - @silktide_reposition.queryBuilder
-            - @silktide_reposition.defaultStorage
+            - "@silktide_reposition.defaultMetadataFactory"
+            - "@silktide_reposition.queryBuilder"
+            - "@silktide_reposition.defaultStorage"
 
     abstract.repository:
         abstract: true
-        factoryService: @silktide_reposition.repositoryManager
+        factoryService: "@silktide_reposition.repositoryManager"
         factoryMethod: "getRepositoryFor"
 
     format.repository:
         class: Downsider\Loggerhead\Format\FormatRepository
-        extends: @abstract.repository
+        extends: "@abstract.repository"
         arguments:
             - Downsider\Loggerhead\Format\Format
 
     field.repository:
         class: Downsider\Loggerhead\Format\FieldRepository
-        extends: @abstract.repository
+        extends: "@abstract.repository"
         arguments:
             - Downsider\Loggerhead\Format\Field
 
     template.repository:
         class: Downsider\Loggerhead\Format\TemplateRepository
-        extends: @abstract.repository
+        extends: "@abstract.repository"
         arguments:
             - Downsider\Loggerhead\Format\Template
