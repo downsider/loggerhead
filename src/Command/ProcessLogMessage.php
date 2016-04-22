@@ -61,19 +61,17 @@ class ProcessLogMessage extends Command
 
         try {
             $this->processor->process($queueMessage->getMessage());
+            $format = $this->processor->getFormat();
+            $this->output->writeln("<comment>Using the '{$format->getName()}' format</comment>");
+            $this->logRepo->setFormat($format);
+            $this->logRepo->save($this->processor->getLog());
+            $this->output->writeln("<info>Log record saved</info>");
             $this->queue->completeMessage($queueMessage);
         } catch (LogProcessingException $e) {
             $this->displayError($e);
             $this->queue->returnMessage($queueMessage);
             return;
         }
-
-        $format = $this->processor->getFormat();
-        $this->output->writeln("<comment>Using the '{$format->getName()}' format</comment>");
-
-        $this->logRepo->setFormat($format);
-        $this->logRepo->save($this->processor->getLog());
-        $this->output->writeln("<info>Log record saved</info>");
     }
 
     protected function displayError(LogProcessingException $e)
